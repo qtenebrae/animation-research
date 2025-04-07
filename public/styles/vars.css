@@ -1,0 +1,13 @@
+:root {
+    --background: #171717;
+    --foreground: #fffce1;
+    --foreground-rgb: 255, 252, 225;
+
+    --white: #fff;
+
+    --purple: #5c00a3;
+    --light-purple: #9911ff;
+    --pink: #ff0088;
+
+    --font-montserrat: 'Montserrat', sans-serif;
+}
