@@ -1,6 +1,52 @@
 .home {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 16rem);
+    gap: 2rem;
+
+    padding: 2rem 0;
 
     height: 400vh;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 96px;
+    aspect-ratio: 1;
+
+    background: var(--background);
+    border-radius: var(--border-radius-sm);
+
+    font-weight: 600;
+
+    user-select: none;
+}
+
+.toggleAnimation {
+    display: flex;
+    justify-content: space-between !important;
+
+    padding: 2rem 4rem !important;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: repeat(2, 64px);
+    grid-template-rows: repeat(2, 64px);
+    gap: 1rem;
+}
+
+.item {
+    width: 64px;
+    aspect-ratio: 1;
+
+    border-radius: var(--border-radius-sm);
+}
+
+.space {
+    grid-column: span 4;
+    grid-row: span 2;
 }

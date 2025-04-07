@@ -1,0 +1,11 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+
+    background: var(--foreground);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 0 8px 4px rgba(var(--foreground-rgb), 0.1);
+}

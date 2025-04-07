@@ -1,13 +1,22 @@
 :root {
     --background: #171717;
+    --background-rbg: 23, 23, 23;
+
     --foreground: #fffce1;
     --foreground-rgb: 255, 252, 225;
 
     --white: #fff;
-
-    --purple: #5c00a3;
-    --light-purple: #9911ff;
     --pink: #ff0088;
+    --pink-rgb: 255, 0, 136;
+
+    --green: #c3fa0f;
+    --green-rgb: 195, 250, 15;
+
+    --blue: #21befd;
+    --blue-rgb: 33, 190, 253;
 
     --font-montserrat: 'Montserrat', sans-serif;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
 }

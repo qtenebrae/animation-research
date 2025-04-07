@@ -25,10 +25,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='ru'>
-            <Container>
-                <Header />
-                <body className={`${montserrat.variable}`}>{children}</body>
-            </Container>
+            <body className={`${montserrat.variable}`}>
+                <Container>
+                    <Header />
+
+                    {children}
+                </Container>
+            </body>
         </html>
     );
 }
