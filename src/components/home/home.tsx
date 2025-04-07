@@ -2,10 +2,12 @@
 
 import styles from './home.module.css';
 
-import { AnimatePresence, motion } from 'motion/react';
-import { useEffect, useState } from 'react';
+import { AnimatePresence, motion, useAnimationFrame } from 'motion/react';
+import { useEffect, useState, useRef } from 'react';
+
 import { Card } from '@/components/ui/card/card';
 import { Toggle } from '@/components/ui/toggle/toggle';
+import cn from 'classnames';
 
 export const Home = () => {
     const toggleSwitch = () => setIsOn(!isOn);
@@ -17,6 +19,17 @@ export const Home = () => {
         const timeout = setTimeout(() => setOrder(shuffle(order)), 1000);
         return () => clearTimeout(timeout);
     }, [order]);
+
+    const cubeRef = useRef<HTMLDivElement>(null);
+
+    useAnimationFrame(t => {
+        if (!cubeRef.current) return;
+
+        const rotate = Math.sin(t / 10000) * 200;
+        const y = (1 + Math.sin(t / 1000)) * -50 + 50;
+
+        cubeRef.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
+    });
 
     return (
         <div className={styles.home}>
@@ -93,14 +106,23 @@ export const Home = () => {
                 </div>
             </Card>
 
-            <div className={styles.space} />
+            <div className={styles.space}>
+                <motion.div className={styles.cube} ref={cubeRef}>
+                    <div className={cn(styles.side, styles.front)} />
+                    <div className={cn(styles.side, styles.left)} />
+                    <div className={cn(styles.side, styles.right)} />
+                    <div className={cn(styles.side, styles.top)} />
+                    <div className={cn(styles.side, styles.bottom)} />
+                    <div className={cn(styles.side, styles.back)} />
+                </motion.div>
+            </div>
 
             {Array.from({ length: 4 }).map((_, i) => (
                 <Card
                     key={i}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4 }}
+                    transition={{ type: 'spring', duration: 0.4 }}
                     viewport={{ once: true }}
                 />
             ))}
