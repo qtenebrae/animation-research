@@ -10,10 +10,11 @@ interface ToggleProps {
 
 export const Toggle = ({ isOn, toggleSwitch }: ToggleProps) => {
     return (
-        <button
+        <motion.button
             className={cn(styles.toggle, {
                 [styles.toggleActive]: isOn,
             })}
+            whileTap={{ scale: 0.97 }}
             onClick={toggleSwitch}
         >
             <motion.div
@@ -33,6 +34,6 @@ export const Toggle = ({ isOn, toggleSwitch }: ToggleProps) => {
                     bounce: 0.2,
                 }}
             />
-        </button>
+        </motion.button>
     );
 };

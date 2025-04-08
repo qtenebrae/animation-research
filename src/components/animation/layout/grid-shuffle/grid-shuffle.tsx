@@ -30,7 +30,7 @@ export const GridShuffle = () => {
     );
 };
 
-const initialOrder = ['#ff0088', '#dd00ee', '#9911ff', '#0d63f8'];
+const initialOrder = ['#ff0088', '#dd00ee', '#9911ff', '#21befd'];
 
 function shuffle([...array]: string[]) {
     return array.sort(() => Math.random() - 0.5);

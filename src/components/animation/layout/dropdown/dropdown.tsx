@@ -57,7 +57,7 @@ export const Dropdown = ({ options, onSelect }: DropdownProps) => {
     };
 
     const iconVariants = {
-        open: { rotate: 180 },
+        open: { rotate: 180, stroke: 'var(--blue)' },
         closed: { rotate: 0 },
     };
 

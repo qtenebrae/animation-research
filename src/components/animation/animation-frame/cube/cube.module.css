@@ -34,10 +34,10 @@
 
 .top {
     transform: rotateX(90deg) translateZ(100px);
-    background-color: var(--green);
+    background-color: var(--purple);
 }
 
 .bottom {
     transform: rotateX(-90deg) translateZ(100px);
-    background-color: var(--green);
+    background-color: var(--purple);
 }
