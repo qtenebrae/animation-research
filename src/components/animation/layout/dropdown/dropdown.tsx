@@ -104,7 +104,7 @@ export const Dropdown = ({ options, onSelect }: DropdownProps) => {
                                     className={styles.item}
                                     onClick={() => handleSelect(option)}
                                     whileHover={{ scale: 1.05, fontWeight: 600 }}
-                                    transition={{ duration: 0.4 }}
+                                    transition={{ duration: 0.2 }}
                                 >
                                     {option}
                                 </motion.li>

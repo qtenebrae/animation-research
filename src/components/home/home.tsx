@@ -9,6 +9,7 @@ import { PathDrawing } from '@/components/animation/basic/path-drawing/path-draw
 import { GridShuffle } from '@/components/animation/layout/grid-shuffle/grid-shuffle';
 import { Cube } from '@/components/animation/animation-frame/cube/cube';
 import { Dropdown } from '@/components/animation/layout/dropdown/dropdown';
+import { Accordion, AccordionItem } from '@/components/animation/layout/accordion/accordion';
 
 export const Home = () => {
     const options = [
@@ -39,6 +40,27 @@ export const Home = () => {
             {/*))}*/}
 
             <Dropdown options={options} onSelect={(option: string) => console.log(option)} />
+            <div className={styles.space}>
+                <Accordion items={items} />
+            </div>
         </div>
     );
 };
+
+const items: AccordionItem[] = [
+    {
+        id: '1',
+        title: '🐔 First Item',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+        id: '2',
+        title: '🐜 Second Item',
+        content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: '3',
+        title: '🐘 Third Item',
+        content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+    },
+];
