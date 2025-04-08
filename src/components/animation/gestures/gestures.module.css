@@ -1,0 +1,15 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 96px;
+    aspect-ratio: 1;
+
+    background: var(--background);
+    border-radius: var(--border-radius-sm);
+
+    font-weight: 600;
+
+    user-select: none;
+}

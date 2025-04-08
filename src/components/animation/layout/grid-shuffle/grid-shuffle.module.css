@@ -1,0 +1,13 @@
+.layout {
+    display: grid;
+    grid-template-columns: repeat(2, 64px);
+    grid-template-rows: repeat(2, 64px);
+    gap: 1rem;
+}
+
+.item {
+    width: 64px;
+    aspect-ratio: 1;
+
+    border-radius: var(--border-radius-sm);
+}
